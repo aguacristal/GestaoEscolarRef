@@ -19,4 +19,11 @@ public class NotaService {
         Nota n = new Nota(alunoId, materiaId, valor, java.time.LocalDateTime.now());
         notaRepo.salvar(n);
     }
+    public double calcularMedia(double n1, double n2) {
+        return (n1 + n2) / 2.0;
+    }
+    
+    public boolean verificarAprovacao(double media) {
+        return media >= 6.0;
+    }
 }
